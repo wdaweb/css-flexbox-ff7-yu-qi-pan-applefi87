@@ -12,7 +12,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #555;
       font-family: '標楷體';
     }
 
@@ -84,8 +83,8 @@
       width: 25%;
       /* 跟上面依樣 */
       height: 18vh;
-      background: linear-gradient(45deg, rgba(0, 0, 0, 0) 49.5%, black 49.5%, rgba(0, 0, 0, 0) 50.5%),
-        linear-gradient(135deg, rgba(0, 0, 0, 0) 49.5%, black 49.5%, rgba(0, 0, 0, 0) 50.5%);
+      background: linear-gradient(45deg, rgba(0, 0, 0, 0) 49.5%, black 49.5%, black 50.5%, rgba(0, 0, 0, 0) 50.5%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0) 49.5%, black 49.5%,  black 50.5%,rgba(0, 0, 0, 0) 50.5%);
     }
 
     /* ---------------------棋子部分----------- */
@@ -95,14 +94,14 @@
     } */
     /* 棋子 */
     .dot {
-      width: 3px;
-      height: 3px;
-      background: rgb(255, 2, 2);
+      width: 1px;
+      height: 1px;
+      transform: translate(-0.5px,-0.5px);
     }
 
     .chess {
-      width: 8vh;
-      height: 8vh;
+      width: 7vh;
+      height: 7vh;
       background: #fff;
       z-index: 1;
       border: 1px solid black;
@@ -110,7 +109,22 @@
       transform: translate(-50%, -50%);
       font-size: 6vh;
       text-align: center;
-      line-height: 8vh;
+      line-height: 7vh;
+    }
+
+    .space-between {
+      display: flex;
+      justify-content: space-between;
+    }
+    .space-around{
+      display: flex;
+      justify-content: space-around;
+    }
+    .r{
+      color:red;
+    }
+    .buttom{
+      align-items:flex-end;
     }
   </style>
 </head>
@@ -135,22 +149,124 @@
         <div class="inner_x"></div>
       </div>
       <div class="absolute block h">
-        <div class="line row">
+        <div class="line row space-between">
+          <div class="dot">
+            <div class="chess">車</div>
+          </div>
+          <div class="dot">
+            <div class="chess">馬</div>
+          </div>
+          <div class="dot">
+            <div class="chess">象</div>
+          </div>
+          <div class="dot">
+            <div class="chess">士</div>
+          </div>
+          <div class="dot">
+            <div class="chess">將</div>
+          </div>
+          <div class="dot">
+            <div class="chess">士</div>
+          </div>
+          <div class="dot">
+            <div class="chess">象</div>
+          </div>
+          <div class="dot">
+            <div class="chess">馬</div>
+          </div>
           <div class="dot">
             <div class="chess">車</div>
           </div>
         </div>
         <div class="line row"></div>
-        <div class="line row"></div>
-        <div class="line row"></div>
+        <div class="line row space-around">
+          <div class="dot">
+            <div class="chess">包</div>
+          </div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot">
+            <div class="chess">包</div>
+          </div>
+        </div>
+        <div class="line row space-between">
+          <div class="dot">
+            <div class="chess">卒</div>
+          </div>
+          <div class="dot">
+            <div class="chess">卒</div>
+          </div>
+          <div class="dot">
+            <div class="chess">卒</div>
+          </div>
+          <div class="dot">
+            <div class="chess">卒</div>
+          </div>
+          <div class="dot">
+            <div class="chess">卒</div>
+          </div>
+        </div>
         <div class="line row river">
           <p>楚河</p>
           <p>漢界</p>
         </div>
+        <div class="line row space-between buttom">
+          <div class="dot r">
+            <div class="chess">兵</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">兵</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">兵</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">兵</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">兵</div>
+          </div>
+        </div>
+        <div class="line row space-around buttom">
+          <div class="dot r">
+            <div class="chess">炮</div>
+          </div>
+          <div class="dot r"></div>
+          <div class="dot r"></div>
+          <div class="dot r">
+            <div class="chess">炮</div>
+          </div>
+        </div>
         <div class="line row"></div>
-        <div class="line row"></div>
-        <div class="line row"></div>
-        <div class="line row"></div>
+        <div class="line row space-between buttom">
+          <div class="dot r">
+            <div class="chess">俥</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">傌</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">相</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">仕</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">帥</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">仕</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">相</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">傌</div>
+          </div>
+          <div class="dot r">
+            <div class="chess">俥</div>
+          </div>
+        </div>
       </div>
       <!-- <div class="absolute cheese_box">
 
